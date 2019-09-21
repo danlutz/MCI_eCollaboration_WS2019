@@ -8,8 +8,8 @@ const proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Supercharged Gatsby',
-    description: 'Makes your developer experience great again',
+    title: 'eCollboration WS2019',
+    description: 'xxx',
     language: 'en',
     locale: 'en_US',
   },

@@ -8,6 +8,9 @@ const HomePage = () => {
     <div className={styles.wrapper}>
       <Container>
         <h1>Supercharged Gatsby</h1>
+        <button type="button" className="btn btn-success">
+          Success
+        </button>
       </Container>
     </div>
   )
