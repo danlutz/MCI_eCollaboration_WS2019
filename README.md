@@ -1,56 +1,67 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/456b9175-04a9-462f-bfba-a6f973283cf1/deploy-status)](https://app.netlify.com/sites/supercharged-gatsby/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9b20866-710f-4ad6-8bd7-d86f4fc400b7/deploy-status)](https://app.netlify.com/sites/mci-ecollaboration/deploys)
 
-# Superpowered Gatbsy
+# eCollaboration
 
-Makes your developer experience great again
+This repository contains all source code and data used on the website
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/danlutz/supercharged-gatsby&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+## Technologies
 
-## Typescript
+We have used the following open-source technologies to build our ePortfolio:
 
-- Full Typescript support
-- Types for all preinstalled packages
+### Languages / Engines
 
-## Code Quality
+- [Node.js](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [SASS/SCSS](https://sass-lang.com/)
 
-- Linting (Eslint)
-- Formatting (Prettier)
-- Testing (Jest)
-- Automatic checks of all these features using pre-commit-hooks (Husky + Lintstaged)
+### Frameworks
 
-## SEO Optimization
+- [React](https://reactjs.org/)
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Netlify CMS](https://www.netlifycms.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
-- Automated web manifest generation
-- Open Graph Tags & Twitter Cards
-- SEO Component for flexible configuration
-- Google Analytics Plugin
+### Code Quality Tooling
 
-## (S)CSS Modules
+- [ESLint](https://eslint.org/)
+- [Jest](https://jestjs.io/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://github.com/typicode/husky)
+- [lint-staged](https://github.com/okonet/lint-staged)
 
-- Full support for (S)CSS and (S)CSS modules
+For a full list of 3rd party modules see [package.json](./package.json) dependencies/devDependencies.
 
-## Netlify & Netlify CMS
+## Running the app locally
 
-- Support for Netlify functions written in Typescript
-- Best-practice security headers
-- Zero-config build process
-- Netlify CMS (+ Cloudinary Integration)
+- Install [Node.js](https://nodejs.org/en/)
+- Execute the following commands in your local repository:
 
-## Custom React Hooks
+```sh
+npm install
+npm start
+```
 
-- Take a look at the /src/hooks folder to explore the options
+You can then access the frontend on [http://localhost:8000](http://localhost:8000)
 
-## Useful 3rd party modules
+## Accessing the CMS
 
-- Bootstrap (+ Reactstrap)
-- Fontawesome
-- Axios
-- Cloudinary
+When your app is running locally, navigate to [http://localhost:8000/admin](http://localhost:8000/admin)
 
-# Environment Variables
+## Deployment
+
+This app is hosting-agnostic, but can be deployed to [Netlify](https://www.netlify.com/) with one click:
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/danlutz/MCI_eCollaboration_WS2019&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
+### Enabling CMS Features
+
+Inside you Netlify app settings:
+
+- Active Netlify Identity
+- Activate Git Gateway and connect it to your repository
+
+## Environment Variables
 
 The following environment variables are required:
 
 - `GATSBY_ORIGIN`: Domain of host, including protocol
-- `GATSBY_CLOUDINARY_CLOUD_NAME`: Cloudinary cloud name
-- `GATSBY_CLOUDINARY_CLOUD_KEY`: Cloudinary API key
