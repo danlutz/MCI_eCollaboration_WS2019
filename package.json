@@ -1,12 +1,12 @@
 {
   "name": "eCollaboration",
   "version": "1.0.0",
-  "description": "Makes your developer experience great again",
+  "description": "",
   "author": "Daniel Lutz <daniel-lutz@live.at>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danlutz/supercharged-gatsby.git"
+    "url": "git+https://github.com/danlutz/MCI_eCollaboration_WS2019.git"
   },
   "scripts": {
     "clean": "rimraf .cache public",
