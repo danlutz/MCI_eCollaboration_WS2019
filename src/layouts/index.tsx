@@ -1,20 +1,19 @@
-import * as React from 'react'
-import { CloudinaryContext } from 'cloudinary-react'
+import React from 'react'
 
 import { SEODefaults } from '../components/SEO'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 import '../styles/global.scss'
 
-const { GATSBY_CLOUDINARY_CLOUD_NAME } = process.env
-
 const Layout = ({ children }: Props) => {
   return (
-    <CloudinaryContext cloudName={GATSBY_CLOUDINARY_CLOUD_NAME}>
+    <>
+      <Header />
       <SEODefaults />
       <main>{children}</main>
       <Footer />
-    </CloudinaryContext>
+    </>
   )
 }
 

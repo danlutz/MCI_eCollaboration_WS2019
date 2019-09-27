@@ -1,46 +1,46 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-interface BlogPosts {
+interface Topic {
   id: string
   fields: {
     slug: string
   }
   frontmatter: {
     title: string
+    subtitle: string
     description: string
   }
 }
 
 const useBlogPosts = () => {
-  const { blogPosts } = useStaticQuery(
+  const { topics } = useStaticQuery(
     graphql`
       query {
-        blogPosts: allMarkdownRemark(
+        topics: allMarkdownRemark(
           filter: {
             frontmatter: {
-              templateKey: { eq: "blogPost" }
+              templateKey: { eq: "topic" }
               published: { eq: true }
             }
           }
         ) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                description
-              }
+          nodes {
+            fields {
+              slug
             }
+            frontmatter {
+              title
+              subtitle
+              description
+            }
+            id
           }
         }
       }
     `,
   )
 
-  return blogPosts.edges.map(({ node }) => node) as BlogPosts[]
+  return topics.nodes as Topic[]
 }
 
 export default useBlogPosts

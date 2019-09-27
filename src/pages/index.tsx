@@ -1,16 +1,32 @@
-import * as React from 'react'
+import React from 'react'
 import { Container } from 'reactstrap'
 
+import TopicList from '../components/TopicList'
+
 import styles from './index.module.scss'
+
+const HeroSection = () => {
+  return (
+    <section className={styles.heroSection}>
+      <div className={styles.heroTitle}>
+        <Container>
+          <h1>eCollaboration</h1>
+          <strong>Ein interaktives ePortfolio</strong>
+        </Container>
+      </div>
+    </section>
+  )
+}
 
 const HomePage = () => {
   return (
     <div className={styles.wrapper}>
+      <HeroSection />
       <Container>
-        <h1>Supercharged Gatsby</h1>
-        <button type="button" className="btn btn-success">
-          Success
-        </button>
+        <section className={styles.section}>
+          <h2>Topics</h2>
+          <TopicList />
+        </section>
       </Container>
     </div>
   )

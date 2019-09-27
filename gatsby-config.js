@@ -8,10 +8,11 @@ const proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'eCollboration WS2019',
-    description: 'xxx',
-    language: 'en',
-    locale: 'en_US',
+    title: 'eCollboration | MCI ePortfolio',
+    description:
+      'Meisten Sie die Herausforderungen des Studierens im Internet und lernen Sie die besten Strategien für einen erfolgreichen Studienabschluss!',
+    language: 'de',
+    locale: 'de_AT',
   },
   developMiddleware: app => {
     app.use(
