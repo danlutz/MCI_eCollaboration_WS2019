@@ -64,7 +64,7 @@ module.exports = {
         manualInit: true,
         modulePath: `${__dirname}/src/cms/cms.ts`,
         publicPath: 'admin',
-        htmlTitle: 'Supercharged CMS',
+        htmlTitle: 'eCollaboration CMS',
       },
     },
     // 'gatsby-plugin-offline',
