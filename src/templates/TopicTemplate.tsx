@@ -1,14 +1,14 @@
-import * as React from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 
 import SEO from '../components/SEO'
 
-export const BlogPostTemplate = ({
+export const TopicTemplate = ({
   title,
   description,
   html,
-}: BlogPostTemplateProps) => {
+}: TopicTemplateTemplateProps) => {
   return (
     <div>
       <SEO title={title} description={description} />
@@ -20,25 +20,23 @@ export const BlogPostTemplate = ({
   )
 }
 
-interface BlogPostTemplateProps {
+interface TopicTemplateTemplateProps {
   title: string
   description: string
   html: string
 }
 
-const BlogPost = ({ data }: BlogPostProps) => {
+const Topic = ({ data }: Props) => {
   const { markdownRemark: blogPost } = data
   const {
     html,
     frontmatter: { title, description },
   } = blogPost
 
-  return (
-    <BlogPostTemplate title={title} description={description} html={html} />
-  )
+  return <TopicTemplate title={title} description={description} html={html} />
 }
 
-interface BlogPostProps {
+interface Props {
   data: {
     markdownRemark: {
       html: string
@@ -50,10 +48,10 @@ interface BlogPostProps {
   }
 }
 
-export default BlogPost
+export default Topic
 
 export const pageQuery = graphql`
-  query BlogByID($id: String!) {
+  query TopicByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

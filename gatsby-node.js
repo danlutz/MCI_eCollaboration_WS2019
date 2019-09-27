@@ -4,10 +4,10 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 const getTemplateName = (templateKey = '') => {
   switch (templateKey) {
-    case 'blogPost':
-      return 'BlogPostTemplate'
+    case 'topic':
+      return 'TopicTemplate'
     default:
-      return null
+      return templateKey
   }
 }
 

@@ -1,13 +1,10 @@
 import CMS from 'netlify-cms-app'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import config from './config'
-import BlogPostPreviewTemplate from './previewTemplates/BlogPostPreviewTemplate'
+import TopicPreviewTemplate from './previewTemplates/TopicPreviewTemplate'
 
 import './previewStyles.scss'
 
-CMS.registerMediaLibrary(cloudinary)
-
-CMS.registerPreviewTemplate('blogPost', BlogPostPreviewTemplate)
+CMS.registerPreviewTemplate('topic', TopicPreviewTemplate)
 
 CMS.init({ config })

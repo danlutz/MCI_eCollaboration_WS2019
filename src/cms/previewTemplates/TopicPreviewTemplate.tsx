@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { CloudinaryContext } from 'cloudinary-react'
 
-import { BlogPostTemplate } from '../../templates/BlogPostTemplate'
+import { TopicTemplate } from '../../templates/TopicTemplate'
 
 const { GATSBY_CLOUDINARY_CLOUD_NAME } = process.env
 
-const BlogPostPreviewTemplate = ({
+const TopicPreviewTemplate = ({
   entry,
   widgetFor /*,
   widgetsFor,
@@ -13,7 +13,7 @@ const BlogPostPreviewTemplate = ({
 }: NetlifyCMSPreviewTemplateProps) => {
   return (
     <CloudinaryContext cloudName={GATSBY_CLOUDINARY_CLOUD_NAME}>
-      <BlogPostTemplate
+      <TopicTemplate
         title={entry.getIn(['data', 'title'])}
         description={entry.getIn(['data', 'description'])}
         html={widgetFor('body')}
@@ -22,4 +22,4 @@ const BlogPostPreviewTemplate = ({
   )
 }
 
-export default BlogPostPreviewTemplate
+export default TopicPreviewTemplate

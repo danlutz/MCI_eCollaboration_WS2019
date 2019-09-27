@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import { templateKey, published, title, markdownBody } from '../partials/index'
 
-const blogPost = {
-  name: 'blog',
-  label: 'Blog',
-  folder: 'src/pages/blog',
+const topic = {
+  name: 'topic',
+  label: 'Topic',
+  folder: 'src/pages/topics',
   create: true,
   slug: '{{slug}}',
-  preview_path: 'blog/{{slug}}',
+  preview_path: 'topic/{{slug}}',
   fields: [
-    templateKey('blogPost'),
+    templateKey('topic'),
     published,
     title,
     {
@@ -23,8 +23,14 @@ const blogPost = {
       widget: 'text',
       hint: 'Important for Search Engine Optimization',
     },
+    {
+      label: 'Hero Image',
+      name: 'heroImage',
+      widget: 'image',
+      hint: 'Image shown on top of page and on when sharing on social media',
+    },
     markdownBody,
   ],
 }
 
-export default blogPost
+export default topic
