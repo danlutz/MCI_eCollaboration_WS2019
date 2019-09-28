@@ -1,0 +1,14 @@
+.wrapper {
+  position: relative;
+  background-size: cover;
+  height: 40vh;
+  color: #fff;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000);
+  width: 100%;
+}
