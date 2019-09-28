@@ -9,10 +9,11 @@ interface Topic {
     title: string
     subtitle: string
     description: string
+    exercises?: string[]
   }
 }
 
-const useBlogPosts = () => {
+const useTopics = () => {
   const { topics } = useStaticQuery(
     graphql`
       query {
@@ -32,6 +33,7 @@ const useBlogPosts = () => {
               title
               subtitle
               description
+              exercises
             }
             id
           }
@@ -43,4 +45,4 @@ const useBlogPosts = () => {
   return topics.nodes as Topic[]
 }
 
-export default useBlogPosts
+export default useTopics

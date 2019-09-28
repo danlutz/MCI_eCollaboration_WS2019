@@ -14,7 +14,7 @@ import {
 } from 'reactstrap'
 
 import useToggle from '../hooks/useToggle'
-import useTopics from '../hooks/cms/useTopics'
+import useTopics from '../hooks/markdown/useTopics'
 
 import Favicon from '../svg/favicon.svg'
 

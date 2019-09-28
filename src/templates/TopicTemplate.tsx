@@ -3,20 +3,44 @@ import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 
 import SEO from '../components/SEO'
+import ExerciseList from '../components/ExerciseList'
+
+import useExercises from '../hooks/markdown/useExercises'
+
+import { Exercise } from '../typings/CMS'
+
+const TopicHeroImage = ({ img }: TopicHeroImageProps) => {
+  return (
+    <div>
+      <Container>
+        <img src={img} alt="" />
+      </Container>
+    </div>
+  )
+}
+
+interface TopicHeroImageProps {
+  img: string
+}
 
 export const TopicTemplate = ({
   title,
   description,
   html,
+  exercises,
 }: TopicTemplateTemplateProps) => {
   return (
-    <div>
+    <>
       <SEO title={title} description={description} />
+      <TopicHeroImage img="" />
       <Container className="contentWrapper">
         <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+        <article>
+          <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          <ExerciseList exercises={exercises} />
+        </article>
       </Container>
-    </div>
+    </>
   )
 }
 
@@ -24,16 +48,25 @@ interface TopicTemplateTemplateProps {
   title: string
   description: string
   html: string
+  exercises: Exercise[]
 }
 
 const Topic = ({ data }: Props) => {
-  const { markdownRemark: blogPost } = data
+  const { markdownRemark: topic } = data
   const {
     html,
-    frontmatter: { title, description },
-  } = blogPost
+    frontmatter: { title, description, exercises: exerciseTitles },
+  } = topic
+  const exercises = useExercises(exerciseTitles)
 
-  return <TopicTemplate title={title} description={description} html={html} />
+  return (
+    <TopicTemplate
+      title={title}
+      description={description}
+      exercises={exercises}
+      html={html}
+    />
+  )
 }
 
 interface Props {
@@ -43,6 +76,7 @@ interface Props {
       frontmatter: {
         title: string
         description: string
+        exercises: string[]
       }
     }
   }
@@ -57,6 +91,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        exercises
       }
     }
   }

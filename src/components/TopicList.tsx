@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import useTopics from '../hooks/cms/useTopics'
+import useTopics from '../hooks/markdown/useTopics'
 
 import styles from './TopicList.module.scss'
 
