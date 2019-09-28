@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Supercharged Gatsby',
-        short_name: 'Supercharged',
+        name: 'eCollboration | MCI ePortfolio',
+        short_name: 'eCollboration',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#fff',
