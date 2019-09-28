@@ -2,12 +2,12 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-const getTemplateName = (templateKey = '') => {
+const getTemplateFileName = (templateKey = '') => {
   switch (templateKey) {
     case 'topic':
       return 'TopicTemplate'
     default:
-      return templateKey
+      return null
   }
 }
 
@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value,
     })
@@ -59,14 +59,17 @@ exports.createPages = async ({ actions, graphql }) => {
       frontmatter: { templateKey },
     } = node
 
-    createPage({
-      path: slug,
-      component: path.resolve(
-        `src/templates/${getTemplateName(templateKey)}.tsx`,
-      ),
-      context: {
-        id,
-      },
-    })
+    const templateFileName = getTemplateFileName(templateKey)
+
+    // Only create pages where templateFileName is defined
+    if (templateFileName) {
+      createPage({
+        path: slug,
+        component: path.resolve(`src/templates/${templateFileName}.tsx`),
+        context: {
+          id,
+        },
+      })
+    }
   })
 }

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
-import topic from './collections/topic'
+import { topic, exercise, answer, author } from './collections'
 
-const domain = process.env.GATSBY_ORIGIN || 'localhost:8000'
+const domain = process.env.GATSBY_ORIGIN || 'http://localhost:8000'
 
 const config = {
   load_config_file: false,
@@ -20,7 +20,7 @@ const config = {
 
   media_folder: 'static/uploads',
 
-  collections: [topic],
+  collections: [topic, exercise, answer, author],
 }
 
 export default config
