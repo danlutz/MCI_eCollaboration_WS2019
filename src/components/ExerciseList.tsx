@@ -5,10 +5,12 @@ import styles from './ExerciseList.module.scss'
 import { Exercise, Answer } from '../typings/CMS'
 
 const ExerciseAnswer = ({ answer }: ExerciseAnswerProps) => {
-  const { title, html } = answer
+  const { html, authors } = answer
   return (
     <div>
-      <h4>{title}</h4>
+      <span>
+        <em>{authors.toString()}</em>
+      </span>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
