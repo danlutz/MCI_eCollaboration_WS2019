@@ -10,5 +10,6 @@ heroImage: /uploads/browser-coffee-cup-6335.jpg
 exercises:
   - 'Welche Vorteile sehen Sie für sich beim eLearning? '
   - 'Welche Herausforderungen kommen auf Sie zu? Wie gehen Sie damit um? '
+  - 'Was denken Sie über die Vorurteile des eLearnings? '
 ---
 
