@@ -2,7 +2,7 @@
 templateKey: topic
 published: true
 title: online Kommunikation
-description: ' Apps und Tool und ihre Möglichkeiten und Kategorien'
+description: Apps und Tool und ihre Möglichkeiten und Kategorien
 heroImage: /uploads/app-brainstorming-branding-1162968.jpg
 exercises:
   - >-
