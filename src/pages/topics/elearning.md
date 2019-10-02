@@ -11,5 +11,8 @@ exercises:
   - 'Welche Vorteile sehen Sie für sich beim eLearning? '
   - 'Welche Herausforderungen kommen auf Sie zu? Wie gehen Sie damit um? '
   - 'Was denken Sie über die Vorurteile des eLearnings? '
+  - >-
+    Welche Unterschiede treten bei einem Online Studium der Sozialwissenschaften
+    und einem Online  Studium im technischen Bereich auf?
 ---
 
