@@ -11,20 +11,24 @@ const exercise = {
   folder: 'src/pages/exercises',
   create: true,
   slug: '{{slug}}',
+  editor: {
+    preview: false,
+  },
   fields: [
     templateKey(collectionName),
-    title,
+    { ...title, label: 'Question' },
     {
       label: 'Answer',
       name: 'answers',
       widget: 'relation',
       collection: answerCollectionName,
       multiple: true,
+      required: false,
       valueField: 'title',
       searchFields: ['title'],
       displayFields: ['title', 'authors'],
     },
-    { ...markdownBody, label: 'Task definition' },
+    { ...markdownBody, label: 'Task definition', required: false },
   ],
 }
 

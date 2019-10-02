@@ -12,20 +12,18 @@ const topic = {
   create: true,
   slug: '{{slug}}',
   preview_path: 'topic/{{slug}}',
+  editor: {
+    preview: false,
+  },
   fields: [
     templateKey(collectionName),
     published,
     title,
     {
-      label: 'Subtitle',
-      name: 'subtitle',
-      widget: 'string',
-    },
-    {
       label: 'Description',
       name: 'description',
       widget: 'text',
-      hint: 'Important for Search Engine Optimization',
+      hint: 'Used for SEO and topic previews',
     },
     {
       label: 'Hero Image',
@@ -39,11 +37,11 @@ const topic = {
       widget: 'relation',
       collection: exerciseCollectionName,
       multiple: true,
+      required: false,
       valueField: 'title',
       searchFields: ['title'],
       displayFields: ['title'],
     },
-    markdownBody,
   ],
 }
 

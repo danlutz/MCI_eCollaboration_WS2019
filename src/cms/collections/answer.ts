@@ -11,9 +11,12 @@ const topic = {
   folder: 'src/pages/answers',
   create: true,
   slug: '{{slug}}',
+  editor: {
+    preview: false,
+  },
   fields: [
     templateKey(collectionName),
-    title,
+    { ...title, hint: 'Not visible on page, required by CMS' },
     {
       label: 'Author',
       name: 'authors',
