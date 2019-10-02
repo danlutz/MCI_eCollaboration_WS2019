@@ -1,7 +1,9 @@
 ---
 templateKey: exercise
 title: >-
-  Welche Tipps würden Sie Ihren Mitstudierenden geben, um Ablenkung beim Lernen
-  bestmöglich zu vermeiden?
+  Welche Tools und Apps glauben Sie, werden für Ihr Studium hilfreich sein?
+  Welche Tools verwendet Ihr Team für die Erstellung des ePortfolios?
+answers:
+  - hilfreiche Tools und Apps
 ---
-
+ ...
