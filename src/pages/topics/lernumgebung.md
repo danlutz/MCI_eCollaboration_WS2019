@@ -1,6 +1,6 @@
 ---
 templateKey: topic
-published: false
+published: true
 title: Lernumgebung
 description: Wo und wie lernt es sich am Besten?
 heroImage: /uploads/blur-bottle-bright-273238.jpg
