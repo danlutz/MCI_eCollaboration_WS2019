@@ -4,5 +4,6 @@ title: Welche/n Lernstil/e bevorzugen Sie und warum?
 answers:
   - Mein Lernstil
   - mein bevorzugter Lernstil
+  - Meien Lernstil
 ---
 
