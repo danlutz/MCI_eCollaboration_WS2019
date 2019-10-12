@@ -7,5 +7,7 @@ description: >-
   Work-/Lifebalance aufrecht erhalten.
 heroImage: /uploads/alarm-clock-art-background-1037993.jpg
 pdf: /uploads/ecollaboration_a3.pdf
+exercises:
+  - Erstellen Sie einen gemeinsamen Zeitplan
 ---
 
