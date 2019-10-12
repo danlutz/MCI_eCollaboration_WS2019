@@ -1,9 +1,10 @@
 ---
 templateKey: topic
 published: true
-title: teamwork
+title: Teamwork
 description: teamwork makes the dream work
 heroImage: /uploads/bump-collaboration-colleagues-1068523.jpg
+pdf: /uploads/ecollaboration_a2.pdf
 exercises:
   - >-
     Überlegen Sie sich für sich eine Konfliktsituation, welche in einem Team
