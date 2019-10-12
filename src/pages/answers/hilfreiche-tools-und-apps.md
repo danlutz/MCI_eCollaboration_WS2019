@@ -12,6 +12,8 @@ Natürlich spielen eher klassische Kommunikationswege wie Email und Messaging ü
 
 Für das ePortfolio haben wir neben der Abstimmung via Skype folgende Tools verwendet:
 
+Wir haben eine Website basierend auf Open-Source Technologien entwickelt, das mit Hilfe eines Content-Management-Systems eine einfache Eingabe von neuen Inhalten ermöglicht.
+
 #### Languages / Engines
 
 * [Node.js](https://nodejs.org/en/)
