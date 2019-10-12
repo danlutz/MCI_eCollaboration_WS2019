@@ -4,6 +4,7 @@ published: true
 title: Motivation
 description: das Feuer das uns antreibt
 heroImage: /uploads/activity-adolescent-carefree-347135.jpg
+pdf: /uploads/ecollaboration_a3.pdf
 exercises:
   - >-
     SWOT Analyse: Gehen Sie gemeinsam Ihre Stärken und Chancen durch, welche Sie
