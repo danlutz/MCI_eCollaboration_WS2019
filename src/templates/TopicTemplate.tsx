@@ -15,6 +15,7 @@ export const TopicTemplate = ({
   description,
   html,
   heroImage,
+  pdf,
   exercises,
 }: TopicTemplateTemplateProps) => {
   return (
@@ -23,6 +24,9 @@ export const TopicTemplate = ({
       <TopicHeader title={title} heroImage={heroImage} />
       <Container className="contentWrapper">
         <article style={{ padding: '2rem 0' }}>
+          <a href={pdf} target="_blank" rel="noopener noreferrer">
+            Aufgabenstellungen
+          </a>
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
           <ExerciseList exercises={exercises} />
         </article>
@@ -35,6 +39,7 @@ interface TopicTemplateTemplateProps {
   title: string
   description: string
   html: string
+  pdf: string
   heroImage: string
   exercises: Exercise[]
 }
@@ -43,7 +48,13 @@ const Topic = ({ data }: Props) => {
   const { markdownRemark: topic } = data
   const {
     html,
-    frontmatter: { title, description, heroImage, exercises: exerciseTitles },
+    frontmatter: {
+      title,
+      description,
+      heroImage,
+      pdf,
+      exercises: exerciseTitles,
+    },
   } = topic
   const exercises = useExercises(exerciseTitles)
 
@@ -52,6 +63,7 @@ const Topic = ({ data }: Props) => {
       title={title}
       description={description}
       heroImage={heroImage}
+      pdf={pdf}
       exercises={exercises}
       html={html}
     />
@@ -66,6 +78,7 @@ interface Props {
         title: string
         description: string
         heroImage: string
+        pdf: string
         exercises: string[]
       }
     }
@@ -81,6 +94,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        pdf
         heroImage
         exercises
       }

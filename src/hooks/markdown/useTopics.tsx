@@ -31,7 +31,6 @@ const useTopics = () => {
             }
             frontmatter {
               title
-              subtitle
               description
               exercises
             }
