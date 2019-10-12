@@ -6,4 +6,4 @@ answers:
   - Vorteile des e-learnings
   - Vorteile des eLearnings (Daniel)
 ---
-...
+
