@@ -32,6 +32,12 @@ const topic = {
       hint: 'Image shown on top of page and on when sharing on social media',
     },
     {
+      label: 'PDF',
+      name: 'pdf',
+      widget: 'file',
+      allow_multiple: false,
+    },
+    {
       label: 'Exercises',
       name: 'exercises',
       widget: 'relation',
