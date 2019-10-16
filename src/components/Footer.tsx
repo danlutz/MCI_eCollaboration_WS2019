@@ -9,7 +9,7 @@ const Footer = () => {
   const authors = useAuthors()
 
   const authorsString = authors
-    .sort()
+    .sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title))
     .reduce(
       (authors, author, i) =>
         `${authors}${i === 0 ? '' : ', '}${author.frontmatter.title}`,
