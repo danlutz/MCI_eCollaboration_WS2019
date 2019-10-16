@@ -24,7 +24,6 @@ const HomePage = () => {
       <HeroSection />
       <Container>
         <section className={styles.section}>
-          <h2>Topics</h2>
           <TopicList />
         </section>
       </Container>
