@@ -39,9 +39,17 @@ const useTopics = () => {
         }
       }
     `,
+  ) as {
+    topics: {
+      nodes: Topic[]
+    }
+  }
+
+  const sortedTopics = topics.nodes.sort((a, b) =>
+    a.frontmatter.title.localeCompare(b.frontmatter.title),
   )
 
-  return topics.nodes as Topic[]
+  return sortedTopics
 }
 
 export default useTopics
