@@ -102,7 +102,11 @@ const useExercises = (exerciseTitles: string[]) => {
     exerciseTitles,
   )
 
-  return exercises
+  const sortedExercises = exercises.sort((a, b) =>
+    a.title.localeCompare(b.title),
+  )
+
+  return sortedExercises
 }
 
 export default useExercises
