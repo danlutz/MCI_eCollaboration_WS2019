@@ -7,5 +7,6 @@ title: >-
 answers:
   - SWOT Analyse
   - Stärken und Chancen
+  - Meine Stärken (Daniel)
 ---
 
