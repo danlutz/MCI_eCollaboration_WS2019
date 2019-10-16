@@ -59,6 +59,7 @@ const Header = () => {
                           color: '#212529',
                           textDecoration: 'none',
                         }}
+                        onClick={toggleIsOpen}
                       >
                         <DropdownItem>{title}</DropdownItem>
                       </Link>
