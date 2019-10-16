@@ -1,4 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import TopicContext, {
+  TopicContextState,
+} from '../context/TopicContext/TopicContext'
+
+import AuthorSwitch from './AuthorSwitch'
 
 import styles from './ExerciseList.module.scss'
 
@@ -6,11 +12,14 @@ import { Exercise, Answer } from '../typings/CMS'
 
 const ExerciseAnswer = ({ answer }: ExerciseAnswerProps) => {
   const { html, authors } = answer
+
+  const answerAuthors = authors
+    .sort()
+    .reduce((answerAuthors, author) => `${answerAuthors}, ${author}`)
+
   return (
     <div>
-      <span>
-        <em>{authors.toString()}</em>
-      </span>
+      <span style={{ color: '#666' }}>{answerAuthors}</span>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
@@ -21,7 +30,17 @@ interface ExerciseAnswerProps {
 }
 
 const ExerciseListItem = ({ exercise }: ExerciseListItemProps) => {
+  const { author } = useContext(TopicContext) as TopicContextState
   const { title, html, answers } = exercise
+
+  const filteredAnswers = answers.filter(
+    ({ authors }) => authors.includes(author) || author === 'all',
+  )
+
+  const sortedAnswers = filteredAnswers.sort((a, b) =>
+    String(a.authors.sort()).localeCompare(String(b.authors.sort())),
+  )
+
   return (
     <>
       <h3>{title}</h3>
@@ -29,7 +48,7 @@ const ExerciseListItem = ({ exercise }: ExerciseListItemProps) => {
         className={styles.taskDescription}
         dangerouslySetInnerHTML={{ __html: html }}
       />
-      {answers.map(answer => (
+      {sortedAnswers.map(answer => (
         <ExerciseAnswer key={answer.id} answer={answer} />
       ))}
     </>
@@ -44,6 +63,7 @@ const ExerciseList = ({ exercises }: Props) => {
   return (
     <>
       <h2>Aufgaben</h2>
+      <AuthorSwitch></AuthorSwitch>
       {exercises.map(exercise => (
         <ExerciseListItem key={exercise.id} exercise={exercise} />
       ))}

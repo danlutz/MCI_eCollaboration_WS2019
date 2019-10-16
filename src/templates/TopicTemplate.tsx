@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 
+import { TopicContextProvider } from '../context/TopicContext/TopicContext'
+
 import SEO from '../components/SEO'
 import TopicHeader from '../components/TopicHeader'
 import ExerciseList from '../components/ExerciseList'
@@ -19,19 +21,24 @@ export const TopicTemplate = ({
   exercises,
 }: TopicTemplateTemplateProps) => {
   return (
-    <>
+    <TopicContextProvider>
       <SEO title={title} description={description} />
       <TopicHeader title={title} heroImage={heroImage} />
-      <Container className="contentWrapper">
-        <article style={{ padding: '2rem 0' }}>
+      <Container
+        className="contentWrapper"
+        style={{ background: "url('/images/pattern.png')" }}
+      >
+        <article style={{ padding: '2rem 0' }} className="topic">
           <a href={pdf} target="_blank" rel="noopener noreferrer">
-            Aufgabenstellungen
+            Aufgabenstellungen anzeigen
           </a>
-          <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          <br />
+          <br />
+          <div dangerouslySetInnerHTML={{ __html: html }} />
           <ExerciseList exercises={exercises} />
         </article>
       </Container>
-    </>
+    </TopicContextProvider>
   )
 }
 
