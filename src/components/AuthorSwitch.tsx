@@ -23,10 +23,8 @@ const AuthorSwitch = () => {
 
   return (
     <div className={styles.wrapper}>
-      <InputGroup style={{ width: '400px' }}>
-        <InputGroupAddon addonType="prepend">
-          Lesen aus der Sicht von:
-        </InputGroupAddon>
+      <InputGroup style={{ maxWidth: '300px' }}>
+        <InputGroupAddon addonType="prepend">Sichtweise:</InputGroupAddon>
         <Input
           type="select"
           name="author"
@@ -34,7 +32,7 @@ const AuthorSwitch = () => {
           value={author}
           onChange={onChange}
         >
-          <option value="all">Jedem</option>
+          <option value="all">Alle</option>
           {authors.map(author => {
             const {
               id,
