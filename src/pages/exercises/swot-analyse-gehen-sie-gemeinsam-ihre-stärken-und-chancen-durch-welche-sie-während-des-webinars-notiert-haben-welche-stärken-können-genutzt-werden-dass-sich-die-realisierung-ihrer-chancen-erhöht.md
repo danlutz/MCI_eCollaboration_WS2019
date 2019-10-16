@@ -6,5 +6,6 @@ title: >-
   sich die Realisierung Ihrer Chancen erhöht?
 answers:
   - SWOT Analyse
+  - Stärken und Chancen
 ---
 
